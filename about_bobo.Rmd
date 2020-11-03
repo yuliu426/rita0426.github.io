@@ -1,0 +1,21 @@
+---
+title: "About Bobo"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+##Bobo
+
+#Who is Bobo?
+
+##Bobo is my little Corgi Boi
+
+#Here is Bobo 
+
+<img src="image/bobo.jpg" style="width:30%", "height = 60%">
+
+##Links
+
+* [Instagram] (https://www.instagram.com/bobo.isacorgi/)

@@ -1,0 +1,74 @@
+---
+title: "Rita's resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+
+<img src="image/rita.jpg" style="width:30%", "height = 60%">
+
+#Basic info
+##Name
+Yu Liu
+
+##Adress
+65 Bay St. Jersey City, New Jersey
+
+##Phone
+626 734 8784
+
+
+#Education
+
+##09/2014-06/2017
+
+  Master of Engineering
+  
+  Huazhong University of Science and Technology (HUST), Major: Biomedical Engineering
+  
+  Research direction: Biomaterial and Tissue Engineering   
+
+##09/2010-06/2014
+
+  Bachelor of Engineering
+  
+  Huazhong University of Science and Technology (HUST) 
+  
+  Major: Biomedical Engineering 
+
+
+#Work Experience
+
+##07/2017-07/2019
+
+Johnson & Johnson
+
+China Office 
+
+Management Trainee (Regulatory Specialist)
+
+##11/2016-02/2017
+
+Pfizer 
+
+China Office
+
+Intern (Clinical Data Management) 
+
+
+#Research Experience
+
+##09/2014-02/2017 
+
+Researcher, Advanced Bio- material and Tissue Engineering Center, HUST 
+
+
+##12/2014-03/2015
+
+Research Assistant, Center of Nanoscience, Chinese Academy of Sciences (CAS)
+
+##02/2014-06/2014
+
+Research Assistant, Advanced Material and Tissue Engineering Center, HUST 

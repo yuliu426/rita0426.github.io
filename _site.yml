@@ -1,0 +1,20 @@
+name: "Yay Rita!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "Rita Resume"
+      href: my_resume.html
+    - text: 'Plotly'
+      href: plotly.html
+    - text: 'Dashboard'
+      href: Dashboard.html
+    - text: 'About Bobo'
+      href: about_bobo.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<liuyuzhust@163.com>
+    - icon: fa-github fa-lg
+      href: https://github.com/yuliu426
+output:
+  html_document:
+    theme: cosmo
