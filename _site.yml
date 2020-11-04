@@ -6,9 +6,9 @@ navbar:
     - text: "Rita Resume"
       href: my_resume.html
     - text: 'Plotly'
-      href: plotly.html
+      href: rita_plotly.html
     - text: 'Dashboard'
-      href: Dashboard.html
+      href: rita_dashboard.html
     - text: 'About Bobo'
       href: about_bobo.html
     - icon: fa-envelope fa-lg

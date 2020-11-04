@@ -1,0 +1,61 @@
+---
+title: "Rita's Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    souce: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(httr)
+library(rvest)
+```
+
+```{r}
+nyc_restr = 
+  GET('https://data.cityofnewyork.us/resource/43nn-pn8j.csv',
+      query = list('$limit' = 4000)) %>% 
+  content('parse') %>% 
+  drop_na(score) 
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+nyc_restr %>% 
+  mutate(text_label = str_c(dba, '\nScore:', score)) %>% 
+  plot_ly(
+    x = ~latitude, y = ~longitude, color = ~score, text = ~text_label, 
+    alpha = .5, 
+    type = 'scatter', mode = 'markers', colors = 'viridis')
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+nyc_restr %>% 
+  mutate(boro = fct_reorder(boro, score)) %>% 
+  plot_ly(y = ~score, x = ~boro, color =~boro,
+          type = 'box', colors = 'viridis')
+```
+
+### Chart C
+
+```{r}
+nyc_restr %>% 
+  count(cuisine_description) %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
+  plot_ly(x = ~cuisine_description, y =~n,color = ~cuisine_description, type = 'bar', colors = 'viridis')
+```
+
