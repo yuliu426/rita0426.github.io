@@ -4,7 +4,7 @@ output:
   flexdashboard::flex_dashboard:
     orientation: columns
     vertical_layout: fill
-    souce: embed
+    source: embed
 ---
 
 ```{r setup, include=FALSE}
@@ -27,7 +27,7 @@ nyc_restr =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Distribution of NYC resturants
 
 ```{r echo=FALSE}
 nyc_restr %>% 
@@ -42,7 +42,7 @@ nyc_restr %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Scores distribution per borough
 
 ```{r echo=FALSE}
 nyc_restr %>% 
@@ -53,7 +53,7 @@ nyc_restr %>%
 
 
 
-### Chart C
+### Main cuisines in NYC(n>50)
 
 ```{r echo=FALSE}
 nyc_restr %>% 
