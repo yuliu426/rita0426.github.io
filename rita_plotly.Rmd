@@ -32,10 +32,13 @@ nyc_restr =
 ```{r}
 nyc_restr %>% 
   mutate(text_label = str_c(dba, '\nScore:', score)) %>% 
+  filter(longitude < -70, latitude > 40) %>% 
   plot_ly(
     x = ~latitude, y = ~longitude, color = ~score, text = ~text_label, 
     alpha = .5, 
     type = 'scatter', mode = 'markers', colors = 'viridis')
+
+##the dots clustering in a small area
 ```
 
 
@@ -54,6 +57,8 @@ nyc_restr %>%
 nyc_restr %>% 
   count(cuisine_description) %>% 
   mutate(cuisine_description = fct_reorder(cuisine_description, n)) %>% 
-  plot_ly(x = ~cuisine_description, y =~n,color = ~cuisine_description, type = 'bar', colors = 'viridis')
+  plot_ly(x = ~cuisine_description, y =~n,color = ~cuisine_description, type = 'bar', colors = 'viridis')%>% 
+  layout(showlegend = FALSE)
 ```
+
 
